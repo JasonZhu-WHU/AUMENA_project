@@ -1,0 +1,1 @@
+Please place the MNR models here, such as gtnm.bin.
