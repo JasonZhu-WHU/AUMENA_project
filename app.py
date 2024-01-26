@@ -1,5 +1,6 @@
 # import sys
 import os
+import re
 # import io
 import json
 import torch
@@ -57,9 +58,9 @@ def input_code_result():
 	print(codeInfo)
 	# preprocess input code
 	method_body = codeInfo['code']
-	# method_body = method_body.replaceAll ("\t ", " ")
-	# method_body = method_body.replaceAll ("\n ", " ")
-	# method_body = method_body.replaceAll (" + ", " ")
+	method_body = method_body.replace("\t", " ")
+	method_body = method_body.replace("\n", " ")
+	method_body = re.sub(r"\s+", " ", method_body).strip()
 	data_examples = [InputExample(
 		guid = 0,
 		text_a = method_body,

@@ -1,4 +1,4 @@
-material-ui/
+material-ui/node_modules/
 __pycache__/
 *.pyc
 *.bin
